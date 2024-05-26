@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Томатный суп",
+        "category": "Супы",
+        "price": 200,
+        "image": "images/tomato-soup.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Салат Цезарь",
+        "category": "Салаты",
+        "price": 250,
+        "image": "images/caesar_salad.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Курица гриль",
+        "category": "Мясо",
+        "price": 230,
+        "image": "images/grilled_chicken.jpg"
+    },
+    {
+        "id": 4,
+        "name": "'Добрый' кола",
+        "category": "Напитки",
+        "price": 130,
+        "image": "images/dobry_cola.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Чечевичный суп",
+        "category": "Супы",
+        "price": 210,
+        "image": "images/ch-soup.jpg"
+    }
+]
