@@ -11,7 +11,11 @@ interface MenuItem {
 
 export class Menu {
     private items: MenuItem[] = menuData as MenuItem[];
-    private cart = new Cart();
+    private cart: Cart; // Reference to the cart
+
+    constructor(cart: Cart) {
+        this.cart = cart;
+    }
 
     render(container: HTMLElement) {
         container.innerHTML = `
@@ -71,7 +75,7 @@ export class Menu {
                 const itemId = button.getAttribute("data-id");
                 const item = this.items.find((i) => i.id === Number(itemId));
                 if (item) {
-                    this.cart.addToCart(item);
+                    this.cart.addToCart(item); // Add item to cart and update
                 }
             });
         });

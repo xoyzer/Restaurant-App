@@ -5,7 +5,6 @@ import { Cart } from "./components/Cart";
 const app = document.querySelector<HTMLDivElement>("#app");
 
 if (app) {
-    const menu = new Menu();
     const cart = new Cart();
 
     app.innerHTML = `
@@ -22,6 +21,7 @@ if (app) {
     const cartIcon = document.querySelector<HTMLDivElement>("#cart-icon");
 
     if (menuContainer) {
+        const menu = new Menu(cart);
         menu.render(menuContainer);
     } else {
         console.error("Menu container not found");

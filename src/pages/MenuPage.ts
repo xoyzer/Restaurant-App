@@ -1,26 +1,26 @@
-import { Menu } from '../components/Menu';
-import { Cart } from '../components/Cart';
+import { Menu } from "../components/Menu";
+import { Cart } from "../components/Cart";
 
 export class MenuPage {
-  render(container: HTMLElement) {
-    container.innerHTML = `
-      <div class="menu-page">
-        <div class="menu-container"></div>
-        <div class="cart-container"></div>
-      </div>
-    `;
+    render(container: HTMLElement) {
+        container.innerHTML = `
+            <div class="menu-page">
+                <div class="menu-container"></div>
+                <div class="cart-container"></div>
+            </div>
+        `;
 
-    const menuContainer = container.querySelector<HTMLDivElement>('.menu-container');
-    const cartContainer = container.querySelector<HTMLDivElement>('.cart-container');
+        const menuContainer = container.querySelector<HTMLDivElement>(".menu-container");
+        const cartContainer = container.querySelector<HTMLDivElement>(".cart-container");
 
-    if (menuContainer && cartContainer) {
-      const menu = new Menu();
-      const cart = new Cart();
+        if (menuContainer && cartContainer) {
+            const cart = new Cart();
+            const menu = new Menu(cart);
 
-      menu.render(menuContainer);
-      cart.render(cartContainer);
-    } else {
-      console.error('Menu or Cart container not found');
+            menu.render(menuContainer);
+            cart.render(cartContainer);
+        } else {
+            console.error("Menu or Cart container not found");
+        }
     }
-  }
 }
